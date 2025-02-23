@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+     margin: 0;
+
+}
+body {
+    background-color: #FFFBF3;
+   
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.hide-mobile {
+  display: none;
+}
+.wrap {
+    margin: 2em;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.home:hover {
+    border-bottom: 1px solid black;
+    color:orange;
+}
+nav ul {
+    list-style: none;
+    background: white;
+    position: fixed;
+    top:0;
+    right: 0;
+    height: 100vh;
+    z-index: 100;
+    width: 40%;
+    text-align: right;
+    padding:2em;
+    font-size: 1.2rem;
+    transform: translateX(100%);
+    transition: 0.5s ease-in-out;
+   
+    li {
+        margin: 1em 0;
+        &:nth-of-type(1) {
+            margin-bottom: 1em;
+        }
+    }
+    a {
+         text-decoration: none;
+         color:black;
+        font-weight: bold;
+        font-size: 1.5rem;
+         &:hover {
+        border-bottom: 1px solid black;
+        color:orange;
+    }
+    }
+   
+}
+
+.open {
+    transform: translateX(0%);
+}
+h1,p {
+    text-align: center;
+}
+h1 {
+    margin-top: 2em;
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+  
+    a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color:black;
+    
+    button {
+        margin-top: 4rem;
+    background: orange;
+    padding: 1em;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    
+    }
+    button:hover {
+        background: rgb(243, 175, 48);
+        color:rgb(54, 54, 54);
+    }
+    }
+ .cat {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 3em;
+
+    img {
+        width: 70%;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50% );
+    }
+
+    .inner-circle, .outer-circle {
+      position: absolute;
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50% -50%);
+    } 
+      
+    .inner-circle {
+        background: #FFEBC3;
+        width: 300px;
+        height: 300px;
+        z-index: -1;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50% );
+    }
+    .outer-circle {
+      background-color: rgb(255, 255, 255);
+      width: 400px;height: 400px;
+     
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50% );
+        z-index: -2;
+    }
+    
+ }
+
+ @media (min-width: 798px) {
+    .wrap {
+        margin: 0 4em;
+    }
+    .hide-desktop {
+      display: none;
+    }
+    .hide-mobile {
+      display: block;
+    }
+    .header-left {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1em;
+
+      .divider {
+        height: 30px;
+        width: 1px;
+        border-right: 1px solid gray ;
+      }
+    }
+        .cat {
+        margin-top: 0;
+        .inner-circle {
+      width: 500px;
+      height: 500px;
+    }
+    
+    }
+    
+    nav ul {
+        position: unset;
+        background: none;
+        display: flex;
+        gap: 2em;
+        height: auto;
+        transform: translateX(0%);
+        
+        li a {
+            font-size: 1rem;
+        }
+        .menu-close img {
+          position: absolute;
+          right: 0;
+          display: flex;
+        }
+    }
+ }
+
+ @media (min-width: 950px) {
+    h1, p {
+        text-align: left;
+    }  
+    h1 img {
+        margin: 0;
+    }
+    main {
+        width: 50%;
+    }
+    .cat {
+        margin-top: 0;
+        .inner-circle {
+      width: 500px;
+      height: 400px;
+    }
+    
+    }
+    .cat-container {
+        position: absolute;
+    z-index: -1;
+    width: 50%;
+    top: 20%;
+    right: 0;
+    margin: 0;
+    }
+
+    
+ }
+
+ @media(min-width:1200px) {
+    .wrap {
+        margin: 0 auto;
+        padding: 0 2rem;
+        max-width: 1200px;
+    }
+    nav {
+        gap:10rem;
+        justify-content: space-between;
+    }
+    .cat {
+        position: relative;
+    }
+    img {
+        max-width: 400px;
+        left: 50%;
+    }
+      a .primary-nav {
+    display: inline-block;
+
+ }
+ }
